@@ -1,9 +1,13 @@
+var request = require('request');
+
 class EventsClient {
   constructor(appid) {
-  
+    
   }
   
-  logCalls(fn) {
-    Scarlet.intercept(fn).on('after', 
+  logCalls(name, fn) {
+    Scarlet.intercept(fn).on('after', f => {
+      request.post(url, data);
+    });
   }
 }

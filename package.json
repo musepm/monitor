@@ -4,6 +4,7 @@
   "description": "Client to musepm events api (musepm-usage) POSTS an event whenever a third party API is called.",
   "main": "index.js",
   "scripts": {
+    "prepublish": "babel --optional runtime --stage 1 -d lib src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,9 @@
   },
   "homepage": "https://github.com/musepm/monitor",
   "dependencies": {
+    "babel-runtime": "^5.6.14",
+    "better-log": "^1.2.0",
+    "request": "^2.58.0",
     "scarlet": "^2.0.20"
   }
 }

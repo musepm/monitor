@@ -6,3 +6,5 @@ function ex() {
 
 ex = monitor.logCalls('', 'ex', ex);
 ex();
+
+setTimeout(f=>{}, 1000);

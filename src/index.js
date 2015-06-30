@@ -16,13 +16,17 @@ class EventsClient {
         var url = `${conf.usagebase}/events`;
         proceed();
         var data = {
-          appida: this.appid,
+          appid: this.appid,
           entity: entity,
           action: name,
           intipaddr: '1.2.3.4',
           type: 'call'
         }
-        request.post(url, {json:true, body: data}); 
+        request.post(url, {json:true, body: data})
+        .on('response', res => {
+          console.log(res.statusCode);
+          console.log(res.body);
+        });
       }).proxy();
     return fn;
   }

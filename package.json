@@ -2,7 +2,7 @@
   "name": "musepm-monitor",
   "version": "1.0.0",
   "description": "Client to musepm events api (musepm-usage) POSTS an event whenever a third party API is called.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "prepublish": "babel --optional runtime --stage 1 -d lib src",
     "test": "echo \"Error: no test specified\" && exit 1"

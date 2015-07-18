@@ -6,8 +6,9 @@ var request = require('request'),
 require('better-log').install();
 
 class EventsClient {
-  constructor(appid) {
+  constructor(acctid, appid) {
     this.appid = appid;
+    thid.accountid = acctid;
   }
 
   logCalls(entity, name, fn) {
@@ -17,6 +18,7 @@ class EventsClient {
         proceed();
         var data = {
           appid: this.appid,
+          accountid: this.accountid,
           entity: entity,
           action: name,
           intipaddr: '1.2.3.4',

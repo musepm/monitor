@@ -8,7 +8,7 @@ require('better-log').install();
 class EventsClient {
   constructor(acctid, appid) {
     this.appid = appid;
-    thid.accountid = acctid;
+    this.accountid = acctid;
   }
 
   logCalls(entity, name, fn) {
